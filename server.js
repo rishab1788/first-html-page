@@ -1,5 +1,8 @@
 var express = require('express');
 var app = express();
+var PORT = process.env.PORT || 3000;
+
+
 
 app.get('/', function (req, res) {
 	res.send('bsdjcdjscjkds');
@@ -7,6 +10,6 @@ app.get('/', function (req, res) {
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(3000, function (arg) {
+app.listen(PORT, function (arg) {
 	console.log("server is started");
 });
